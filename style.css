@@ -1,0 +1,477 @@
+/* BloodConnect ki CSS file
+   Yahan hum website ke colours, layout aur effects set kar rahe hain.
+*/
+
+/* Sabhi elements ki extra spacing reset kar di */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Puri website ka basic look */
+body {
+    font-family: Arial, sans-serif;
+    background: #fffafa;
+    color: #292929;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Upar wala navigation bar */
+header {
+    background: white;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    min-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: #c51f35;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+/* Mouse le jane par link ka colour change hoga */
+nav a:hover {
+    color: #c51f35;
+}
+
+/* Home page ka welcome section */
+.hero, .page-heading {
+    background: linear-gradient(120deg, #fff0f2, #fffafa);
+    padding: 75px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 35px;
+}
+
+.tag {
+    color: #c51f35;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 46px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+h1 span {
+    color: #c51f35;
+}
+
+h2 {
+    margin-bottom: 14px;
+}
+
+.intro, .page-heading p:last-child {
+    color: #666;
+    max-width: 650px;
+    margin-bottom: 22px;
+}
+
+/* Buttons ka common design */
+.button {
+    display: inline-block;
+    background: #c51f35;
+    color: white;
+    padding: 12px 21px;
+    border: none;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect: button thoda upar aata hai */
+.button:hover {
+    background: #941629;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(197,31,53,0.25);
+}
+
+/* Click karne par button dabta hua lagega */
+.button:active {
+    background: #6f1020;
+    transform: scale(0.96);
+}
+
+/* CSS se banaya hua decorative blood drop */
+.blood-art {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(150,20,40,0.12);
+}
+
+.big-drop {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 15px;
+    border-radius: 55% 45% 60% 40% / 65% 55% 45% 35%;
+    background: radial-gradient(circle at 30% 25%, #ff9ba7, #d51f3b 55%, #8e1024);
+    box-shadow: inset -12px -12px 20px rgba(70,0,10,0.25),
+                0 15px 25px rgba(160,20,40,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 65px;
+    animation: floatDrop 3s ease-in-out infinite;
+}
+
+/* Drop ko halka upar neeche move karne ki animation */
+@keyframes floatDrop {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-14px) rotate(5deg); }
+}
+
+.section {
+    padding: 65px 0;
+}
+
+.section-intro {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Cards par hover effect */
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(120,20,35,0.13);
+}
+
+.card-icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.card p, .step p, .resource p {
+    color: #666;
+    margin: 8px 0 14px;
+}
+
+.card a, .resource a {
+    color: #c51f35;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.soft-bg {
+    background: #fff0f2;
+}
+
+.motivation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+/* Inner pages ke simple list items */
+.simple-list {
+    padding-left: 22px;
+}
+
+.simple-list li {
+    margin: 12px 0;
+}
+
+.note, .form-note {
+    color: #777;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* Myths aur facts ke boxes */
+.myth-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.myth-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+    transition: transform 0.3s;
+}
+
+.myth-card:hover {
+    transform: translateY(-5px);
+}
+
+.myth-label {
+    color: #c51f35;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.fact-label {
+    display: inline-block;
+    color: #16834a;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+/* Donation process ke steps */
+.steps {
+    max-width: 800px;
+}
+
+.step {
+    display: flex;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid #f0dadd;
+}
+
+.step-number {
+    min-width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #c51f35;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Blood group ke boxes */
+.blood-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+}
+
+.blood-card {
+    background: #c51f35;
+    color: white;
+    text-align: center;
+    padding: 27px;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.blood-card:hover {
+    background: #941629;
+    transform: scale(1.05);
+}
+
+.info-box, .quote-box {
+    background: #fff0f2;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+/* Official websites ki list */
+.resource {
+    background: white;
+    padding: 22px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Donor form ka layout */
+.form-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.donor-form {
+    background: white;
+    padding: 28px;
+    border-radius: 13px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+}
+
+.donor-form label {
+    display: block;
+    font-weight: bold;
+    margin: 13px 0 6px;
+}
+
+.donor-form input,
+.donor-form select,
+.donor-form textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.donor-form input:focus,
+.donor-form select:focus,
+.donor-form textarea:focus {
+    outline: 2px solid #e9a0aa;
+    border-color: #c51f35;
+}
+
+.donor-form .check-label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.donor-form .check-label input {
+    width: auto;
+}
+
+.donor-form button {
+    margin-top: 16px;
+}
+
+.center, .final-message {
+    text-align: center;
+}
+
+.final-message {
+    margin-top: 45px;
+}
+
+.final-message p {
+    color: #c51f35;
+    font-weight: bold;
+}
+
+/* Website ka footer */
+footer {
+    background: #28171a;
+    color: white;
+    text-align: center;
+    padding: 32px 0;
+}
+
+footer p {
+    color: #e7cfd2;
+}
+
+.copyright {
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+/* Mobile par layout ko adjust kar rahe hain */
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero-content, .form-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .motivation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 550px) {
+    .card-grid, .myth-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blood-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .resource {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 31px;
+    }
+}
+
+/* Agar kisi ko animations pasand nahi to unke liye */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
